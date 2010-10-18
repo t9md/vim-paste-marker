@@ -6,32 +6,25 @@ example
 ----------------------------------
 ## default keymap( fom me! mac key <D-> prefix)
 
-* put mark
-
+put mark
     nnoremap <D-p> :call Pm.put_mark()<CR>
 
-* peep target mark
-
+peep target mark
     nnoremap <D-M> :call Pm.next_target()<CR>
 
-* Yank visualy selected text and immediately Paste to marked target
-
+Yank visualy selected text and immediately Paste to marked target
     vnoremap <D-M> :<C-u>call Pm.next_target()<CR>gv
 
-* move target mark (useless if you use only one mark)
-
+move target mark (useless if you use only one mark)
     vnoremap <D-P> :<C-u>call Pm.next_target()<CR>gv
 
-* Paste and clear all mark, don't return yanked position
-
+Paste and clear all mark, don't return yanked position
     vnoremap <D-p>   y:call Pm.paste_next(1)<CR>:call Pm.clear_all()<CR>
 
-* Paste and return yanked position. 
-
+Paste and return yanked position. 
     vnoremap <D-P>  y:call Pm.paste_next(0)<CR>
 
-* clear all mark
-
+clear all mark
     nnoremap <D-D> :call  Pm.clear_all()<CR>
 
 Useful Scenario
